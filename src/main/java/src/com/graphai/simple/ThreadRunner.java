@@ -10,6 +10,9 @@ import java.util.UUID;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
+/**
+ * It runs two players in two threads and exchanges 10 ping and reply messages
+ */
 public class ThreadRunner {
     private static final int PING_TOTAL = 100_000;
     private volatile List<SimpleMessage> channel = new LinkedList<>();

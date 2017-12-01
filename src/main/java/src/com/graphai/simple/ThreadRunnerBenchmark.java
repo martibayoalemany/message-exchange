@@ -9,6 +9,9 @@ import org.openjdk.jmh.annotations.Warmup;
 
 import java.util.concurrent.TimeUnit;
 
+/**
+ * Benchmarking for the two threads solution
+ */
 @BenchmarkMode(org.openjdk.jmh.annotations.Mode.SingleShotTime)
 @Warmup(iterations = 8)
 @Measurement(iterations = 8)

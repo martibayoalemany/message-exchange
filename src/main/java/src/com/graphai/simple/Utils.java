@@ -2,6 +2,9 @@ package com.graphai.simple;
 
 import java.io.IOException;
 
+/**
+ * Utils to start a class in a separate java process
+ */
 public class Utils {
 
     public static Process execute(Class clazz) {
