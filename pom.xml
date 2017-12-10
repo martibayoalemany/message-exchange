@@ -44,25 +44,24 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
-            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-all</artifactId>
             <version>2.0.2-beta</version>
-            <scope>test</scope>
         </dependency>
+
+        <!-- Jetbrains -->
         <dependency>
-            <groupId>io.reactivex.rxjava2</groupId>
-            <artifactId>rxjava</artifactId>
-            <version>2.1.6</version>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>15.0</version>
         </dependency>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>RELEASE</version>
-        </dependency>
+
+
     </dependencies>
+
+
 
     <build>
         <plugins>
@@ -76,38 +75,13 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
+
             <plugin>
-                <groupId>io.gatling</groupId>
-                <artifactId>gatling-maven-plugin</artifactId>
-                <version>3.0.0-M2</version>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.2.1</version>
                 <configuration>
-                    <configFolder>${project.basedir}/src/test/resources</configFolder>
-                    <dataFolder>${project.basedir}/src/test/resources/data</dataFolder>
-                    <resultsFolder>${project.basedir}/target/gatling/results</resultsFolder>
-                    <bodiesFolder>${project.basedir}/src/test/resources/bodies</bodiesFolder>
-                    <simulationsFolder>${project.basedir}/src/test/scala</simulationsFolder>
-                </configuration>
-            </plugin>
-            <plugin>
-                <artifactId>maven-assembly-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>single</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <descriptorRefs>
-                        <!-- This tells Maven to include all dependencies -->
-                        <descriptorRef>jar-with-dependencies</descriptorRef>
-                    </descriptorRefs>
-                    <archive>
-                        <manifest>
-                            <mainClass>com.graphai.application</mainClass>
-                        </manifest>
-                    </archive>
+                    <mainClass>com.graphai.InProcStarter</mainClass>
                 </configuration>
             </plugin>
             <!-- Make this jar executable -->
@@ -115,13 +89,9 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
                 <configuration>
-                    <!-- DO NOT include log4j.properties file in your Jar -->
-                    <excludes>
-                        <exclude>**/log4j.properties</exclude>
-                    </excludes>
                     <archive>
                         <manifest>
-                            <mainClass>com.graphai.chanelBased.ApplicationProcess.main </mainClass>
+                            <mainClass>com.graphai.chanelBased.ApplicationProcess.OutProcStarter </mainClass>
                         </manifest>
                     </archive>
                 </configuration>
