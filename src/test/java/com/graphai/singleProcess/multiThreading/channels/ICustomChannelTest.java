@@ -34,9 +34,11 @@ public class ICustomChannelTest {
     @Theory
     public void next_index(ICustomChannel channel) throws Exception {
         if(channel.getBufferSize() == 0) {
+            // If the channel is unbuffered nextIndex should deliver always -1
             assertTrue(channel.nextIndex(0) == -1);
         }
         else if(channel.getBufferSize() == 1) {
+            // With buffer size one next index is always 0
             for (int i = 0; i < 2; i++)
                 assertTrue(channel.nextIndex(0) == 0);
         }

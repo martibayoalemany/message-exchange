@@ -4,11 +4,6 @@ import com.graphai.utils.ProcessUtils;
 
 import java.io.IOException;
 
-
-/**
- * It runs two players in two threads and exchanges *totalMessage* ping and reply messages
- * using a MemoryMap
- */
 public class ProcessRunner implements IProcessRunner {
 
     public ProcessRunner() {
@@ -40,4 +35,3 @@ public class ProcessRunner implements IProcessRunner {
                 .redirectOutput(ProcessBuilder.Redirect.INHERIT).start();
     }
 }
-

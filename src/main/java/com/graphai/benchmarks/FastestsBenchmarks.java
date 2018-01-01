@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 @Warmup(iterations = 8)
 @Measurement(iterations = 8)
 @Fork(1)
-@OutputTimeUnit(TimeUnit.MILLISECONDS)
+@OutputTimeUnit(TimeUnit.NANOSECONDS)
 public class FastestsBenchmarks {
     private static final int SMALL = 1_000;
     private static final int LARGE = 1_000_000_000;

@@ -50,7 +50,7 @@ public class DequeReplier implements IPlayer {
             while (true) {
                 if(isVerbose())
                     System.out.println(getRepr());
-                // We need to use a lock, it seems the blocking queue does not perform properlie
+                // We need to use a lock here eventhough poll is a blocking call
                 parent.getLock().lock();
                 try {
                     Byte message;

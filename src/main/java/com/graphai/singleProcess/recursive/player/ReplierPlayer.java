@@ -2,7 +2,6 @@ package com.graphai.singleProcess.recursive.player;
 
 import com.graphai.messages.ByteMessage;
 import com.graphai.singleProcess.IPlayer;
-import com.graphai.singleProcess.multiThreading.GenericStrategy;
 import com.graphai.singleProcess.recursive.RecursiveStrategy;
 
 import java.beans.PropertyChangeEvent;

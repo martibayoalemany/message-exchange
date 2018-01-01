@@ -58,7 +58,7 @@ public class DequeInitiator implements IPlayer {
                     pingsCount++;
                 }
 
-                // We need to use a lock here to fix what it seems to be a bug in the blocking queue
+                // We need to use a lock here eventhough poll is a blocking call
                 parent.getLock().lock();
                 try {
                     Byte message;

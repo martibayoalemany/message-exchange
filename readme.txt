@@ -15,6 +15,9 @@ Benchmark  1_000 / 1_000_000_000          Mode  Cnt    Score     Error  Units
 FastestsBenchmarks.executeRecursive       avgt    8   ≈ 10⁻⁴            ms/op
 FastestsBenchmarks.executeRecursiveLarge  avgt    8  238.086 ± 101.987  ms/op
 
+Benchmark   1_000 / 1_000_000_000        Mode  Cnt          Score          Error  Units
+FastestsBenchmarks.executeRecursive       avgt    8        187.760 ±       20.606  ns/op
+FastestsBenchmarks.executeRecursiveLarge  avgt    8  193_142_956.833 ± 28_587_098.353  ns/op
 
 Benchmark 1_000 / 100_000                             Mode  Cnt    Score     Error  Units
 SingleProcessBenchmarks.executeRecursive              avgt    8   ≈ 10⁻⁴            ms/op

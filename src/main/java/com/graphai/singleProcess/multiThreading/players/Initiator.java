@@ -51,8 +51,6 @@ public class Initiator implements IPlayer {
     @Override
     public IPlayer call() throws IOException {
         while (true) {
-            //if(isVerbose())
-            //    System.out.println(getRepr());
             if(parent.getLock() != null)
                 parent.getLock().lock();
             try {
