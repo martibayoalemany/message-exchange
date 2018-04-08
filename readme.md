@@ -1,6 +1,10 @@
 
-Benchmark of the different channels (from best to worse)
----------------------------------------------------------
+### TODOS
+Fix issue with java 9 and NoClassDefFoundError: javax/annotation/Generated
+https://github.com/google/dagger/issues/880
+
+### Benchmark of the different channels (from best to worse)
+
 
 
 Benchmark 1_000 / 100_000                          Mode  Cnt     Score      Error  Units
