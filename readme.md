@@ -7,7 +7,7 @@ https://github.com/google/dagger/issues/880
 
 
 
-Benchmark 1_000 / 100_000                          Mode  Cnt     Score      Error  Units 
+Benchmark 1_000 / 100_000      |                    Mode | Cnt    | Score   |   Error |Units 
 MultiProcessBenchmark.executeProcessBuffered       avgt    8   513.479 ±  462.307  ms/op 
 MultiProcessBenchmark.executeProcessBufferedLarge  avgt    8  8553.014 ± 5603.001  ms/op 
 
